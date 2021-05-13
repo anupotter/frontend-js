@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Form</title>
+    <script>
+        function validateForm() {
+            var x = document.forms["myForm"]["firstname"].value;
+            if (x == "" || x == null) {
+                alert("Please Enter Your First Name");
+                return false;
+            }
+            if (myForm.checkme.checked == false) {
+                alert("Please Check the box");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form name="myForm" action="" onsubmit="return validateForm()" method="post" required>
+        First Name: <input type="text" name="firstname" />
+        Check Me: <input type="checkbox" name="checkme" />
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

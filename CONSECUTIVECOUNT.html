@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Consecutive Number</title>
+    <script>
+        function printConsecutiveCount() {
+            arr = [1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0]
+            var largestCount = 0;
+            var currentCount = 0;
+            var evenNumbers = "<br>Even Numbers:<br>";
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i] === 0) {
+                    currentCount = 0;
+                } else {
+                    currentCount++;
+                };
+                if (currentCount > largestCount) largestCount = currentCount;
+            };
+            document.getElementById("print").innerHTML = largestCount;
+            return largestCount;
+        }
+    </script>
+</head>
+
+<body>
+    <h4>arr = [1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0]</h4>
+    <button type="button" onclick="printConsecutiveCount()">Click To Print Maximum Consecutives 1's</button>
+    <div id="print"></div>
+</body>
+
+</html>

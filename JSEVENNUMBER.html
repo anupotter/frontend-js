@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Even Number</title>
+    <script>
+        function printEvenNumbers(){
+        arr = [19, 15, 18, 17, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 20, 22, 24, 26, 23, 25, 29, 30]
+        var evenNumbers = "<br>Even Numbers:<br>";
+        for(i=0; i<arr.length; i++){
+          if(arr[i] % 2 === 0){
+            evenNumbers += arr[i] + "<br>";
+          }
+        }
+        document.getElementById("print").innerHTML = evenNumbers;
+      }
+    </script>
+</head>
+<body>
+    <h4>arr = [19, 15, 18, 17, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 20, 22, 24, 26, 23, 25, 29, 30]</h4>
+    <button type="button" onclick="printEvenNumbers()">Click To Print Even Numbers from array</button>
+    <div id="print"></div>
+</body>
+</html>
